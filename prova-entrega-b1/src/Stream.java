@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Stream {
-    public static void main(String[] args) throws Exception {
+      public void funcStream() {
 
         /*
          * ### Opção 4: O "Filtro de Streamer" (Cálculo de Donates/Sub)
@@ -24,7 +24,7 @@ public class Stream {
         JFrame janela = new JFrame("O \"Filtro de Streamer\" (Cálculo de Donates/Sub)");
 
         janela.setLayout(null);
-        janela.setSize(360, 400);
+        janela.setSize(360, 350);
 
         JLabel labelDonates = new JLabel("Valor total de Donates: ");
         labelDonates.setBounds(20, 20, 300, 30);
@@ -50,7 +50,7 @@ public class Stream {
 
         JLabel labelResultado = new JLabel("Valor: R$ 0,00");
         labelResultado.setFont(new Font("Arial", Font.BOLD, 16));
-        labelResultado.setBounds(20, 290, 340, 30);
+        labelResultado.setBounds(20, 260, 340, 30);
 
         btn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -67,9 +67,12 @@ public class Stream {
 
                 if (valor < 100) {
                     JOptionPane.showMessageDialog(null, "Saldo insuficiente para saque mínimo");
+                    labelResultado.setForeground(new Color(200, 0, 0)); 
+                } else {
+                    labelResultado.setForeground(new Color(0, 200, 10));
                 }
+
                 labelResultado.setText(String.format("Total: R$ %.2f", valor));
-                    labelResultado.setForeground(new Color(50, 50, 50)); 
             }
         });
 
