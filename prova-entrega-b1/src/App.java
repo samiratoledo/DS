@@ -20,7 +20,7 @@ public class App {
             case "3":
                 Xp janelaXp = new Xp();
                 janelaXp.funcXp();
-                ;
+                
                 break;
 
             case "4":

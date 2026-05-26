@@ -61,7 +61,6 @@ public class Frete {
                     double peso = Double.parseDouble(inputPeso.getText());
                     String tipo = (String) comboEnvio.getSelectedItem();
 
-                    // 2. Lógica de cálculo
                     double total = 10.00; // Valor base
                     total += distancia * 0.50; // R$ 0,50 por km
 
@@ -70,7 +69,7 @@ public class Frete {
                     }
 
                     if (tipo.equals("Expresso")) {
-                        total *= 1.20; // +20%
+                        total *= 1.20; 
                     }
 
                     labelResultado.setText(String.format("Total: R$ %.2f", total));
